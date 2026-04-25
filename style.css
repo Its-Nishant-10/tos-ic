@@ -1,34 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&family=Work+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap');
-
 html, body, [class*="css"] {
     font-family: 'Work Sans', sans-serif !important;
 }
-
 h1, h2, h3, h4, .page-title, .section-title, .sidebar-title, .savage-panel-title, .score-orb .num, .fun-value, .cc-title, .cc-score-num, .archive-score {
     font-family: 'Figtree', sans-serif !important;
 }
-
 .stApp {
     background: #09090B;
     color: #A1A1AA;
 }
-
-/* Hide Streamlit header and footer */
 [data-testid="stHeader"], [data-testid="stFooter"], #MainMenu, footer, header {
     display: none !important;
     visibility: hidden !important;
 }
-
 [data-testid="stSidebar"] {
     background: #09090B !important;
     border-right: 1px solid #27272A;
 }
-
 h1, h2, h3, h4 {
     color: #FAFAFA;
     font-weight: 800;
 }
-
 .page-title {
     font-size: 46px;
     font-weight: 800;
@@ -36,26 +28,22 @@ h1, h2, h3, h4 {
     letter-spacing: -1.5px;
     color: #FAFAFA;
 }
-
 .page-title span {
     color: #E11D48;
     text-shadow: 0 0 20px rgba(225, 29, 72, 0.2);
 }
-
 .page-sub {
     font-size: 16px;
     color: #71717A;
     margin-bottom: 30px;
     font-weight: 500;
 }
-
 .section-title {
     font-size: 23px;
     font-weight: 800;
     margin: 35px 0 18px 0;
     color: #FAFAFA;
 }
-
 .stTextArea textarea,
 .stTextInput > div > div > input {
     background-color: #18181B !important;
@@ -64,13 +52,11 @@ h1, h2, h3, h4 {
     border-radius: 12px !important;
     font-family: 'JetBrains Mono', monospace !important;
 }
-
 .stTextArea textarea:focus,
 .stTextInput > div > div > input:focus {
     border-color: #E11D48 !important;
     box-shadow: 0 0 0 2px rgba(225, 29, 72, 0.2) !important;
 }
-
 .stButton > button {
     background: #E11D48 !important;
     color: #ffffff !important;
@@ -82,13 +68,11 @@ h1, h2, h3, h4 {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-
 .stButton > button:hover {
     background: #BE123C !important;
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(225, 29, 72, 0.3);
 }
-
 .sidebar-title {
     color: #E11D48;
     margin: 0;
@@ -96,14 +80,12 @@ h1, h2, h3, h4 {
     font-weight: 800;
     letter-spacing: -1.2px;
 }
-
 .sidebar-tagline {
     color: #71717A;
     font-size: 12px;
     font-weight: 600;
     margin-top: 4px;
 }
-
 .savage-panel {
     margin: 12px 0 20px 0;
     padding: 16px;
@@ -112,7 +94,6 @@ h1, h2, h3, h4 {
     border: 1px solid #3F3F46;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
-
 .savage-panel-title {
     color: #EA580C;
     font-size: 16px;
@@ -121,14 +102,12 @@ h1, h2, h3, h4 {
     letter-spacing: 1px;
     margin-bottom: 6px;
 }
-
 .savage-panel-text {
     color: #D4D4D8;
     font-size: 13px;
     font-weight: 500;
     line-height: 1.5;
 }
-
 .input-mode-card {
     background: #18181B;
     border: 1px solid #27272A;
@@ -136,7 +115,6 @@ h1, h2, h3, h4 {
     padding: 18px;
     margin-bottom: 16px;
 }
-
 .active-mode-chip {
     display: inline-block;
     margin-bottom: 14px;
@@ -150,7 +128,6 @@ h1, h2, h3, h4 {
     letter-spacing: 1px;
     text-transform: uppercase;
 }
-
 .top-result-box {
     background: #18181B;
     border: 1px solid #27272A;
@@ -163,7 +140,6 @@ h1, h2, h3, h4 {
     margin-bottom: 24px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
-
 .score-orb {
     background: rgba(225, 29, 72, 0.05);
     border: 3px solid #E11D48;
@@ -176,20 +152,17 @@ h1, h2, h3, h4 {
     justify-content: center;
     flex-shrink: 0;
 }
-
 .score-orb .num {
     font-size: 46px;
     font-weight: 800;
     color: #E11D48;
     line-height: 1;
 }
-
 .score-orb .den {
     font-size: 13px;
     color: #F87171;
     font-weight: 700;
 }
-
 .company-logo,
 .cc-logo {
     object-fit: contain;
@@ -197,7 +170,6 @@ h1, h2, h3, h4 {
     padding: 3px;
     vertical-align: middle;
 }
-
 .company-logo {
     width: 38px;
     height: 38px;
@@ -205,14 +177,12 @@ h1, h2, h3, h4 {
     margin-right: 8px;
     border: 1px solid #27272A;
 }
-
 .cc-logo {
     width: 32px;
     height: 32px;
     border-radius: 6px;
     margin-right: 7px;
 }
-
 .company-name {
     font-size: 14px;
     color: #71717A;
@@ -221,7 +191,6 @@ h1, h2, h3, h4 {
     letter-spacing: 1px;
     margin-bottom: 8px;
 }
-
 .top-result-text h2 {
     color: #FAFAFA;
     margin: 0 0 8px 0;
@@ -229,7 +198,6 @@ h1, h2, h3, h4 {
     font-weight: 800;
     text-transform: uppercase;
 }
-
 .top-result-text p {
     font-size: 18px;
     margin: 0;
@@ -237,14 +205,12 @@ h1, h2, h3, h4 {
     line-height: 1.55;
     font-weight: 500;
 }
-
 .fun-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 14px;
     margin: 18px 0 10px 0;
 }
-
 .fun-card {
     background: #18181B;
     border: 1px solid #27272A;
@@ -252,7 +218,6 @@ h1, h2, h3, h4 {
     padding: 18px;
     text-align: center;
 }
-
 .fun-label {
     font-size: 11px;
     color: #71717A;
@@ -261,26 +226,22 @@ h1, h2, h3, h4 {
     text-transform: uppercase;
     margin-bottom: 7px;
 }
-
 .fun-value {
     font-size: 28px;
     font-weight: 800;
     color: #E11D48;
 }
-
 .savage-banner,
 .savage-translation {
     background: #18181B;
     border: 1px solid #27272A;
     border-radius: 16px;
 }
-
 .savage-banner {
     margin: 20px 0 8px 0;
     padding: 22px;
     border-left: 4px solid #EA580C;
 }
-
 .savage-banner-title,
 .savage-translation-label {
     color: #EA580C;
@@ -288,37 +249,31 @@ h1, h2, h3, h4 {
     letter-spacing: 1px;
     text-transform: uppercase;
 }
-
 .savage-banner-title {
     font-size: 15px;
     margin-bottom: 8px;
 }
-
 .savage-banner-text {
     color: #FAFAFA;
     font-size: 19px;
     font-weight: 700;
     line-height: 1.45;
 }
-
 .savage-translation {
     margin-top: 13px;
     padding: 14px;
     border-left: 4px solid #EA580C;
 }
-
 .savage-translation-label {
     font-size: 10px;
     margin-bottom: 6px;
 }
-
 .savage-translation-text {
     color: #D4D4D8;
     font-size: 14px;
     font-weight: 600;
     line-height: 1.5;
 }
-
 .flag-card,
 .compare-card,
 .archive-card {
@@ -326,13 +281,11 @@ h1, h2, h3, h4 {
     border: 1px solid #27272A;
     border-radius: 16px;
 }
-
 .flag-card {
     padding: 24px;
     height: 100%;
     margin-bottom: 12px;
 }
-
 .flag-head {
     display: flex;
     justify-content: space-between;
@@ -340,14 +293,12 @@ h1, h2, h3, h4 {
     margin-bottom: 14px;
     gap: 10px;
 }
-
 .flag-title {
     font-size: 18px;
     font-weight: 800;
     color: #FAFAFA;
     margin: 0;
 }
-
 .badge {
     background: rgba(225, 29, 72, 0.1);
     color: #E11D48;
@@ -359,26 +310,22 @@ h1, h2, h3, h4 {
     font-weight: 800;
     white-space: nowrap;
 }
-
 .badge.high {
     background: rgba(234, 88, 12, 0.1);
     color: #EA580C;
     border-color: rgba(234, 88, 12, 0.2);
 }
-
 .badge.safe {
     background: rgba(161, 161, 170, 0.1);
     color: #A1A1AA;
     border-color: rgba(161, 161, 170, 0.2);
 }
-
 .flag-desc {
     font-size: 15px;
     color: #A1A1AA;
     line-height: 1.6;
     font-weight: 500;
 }
-
 .worst-case-box {
     background: #09090B;
     border: 1px solid #27272A;
@@ -386,7 +333,6 @@ h1, h2, h3, h4 {
     padding: 14px;
     border-left: 4px solid #E11D48;
 }
-
 .wc-label {
     font-size: 10px;
     text-transform: uppercase;
@@ -395,7 +341,6 @@ h1, h2, h3, h4 {
     letter-spacing: 1.5px;
     margin-bottom: 7px;
 }
-
 .wc-text {
     font-size: 14px;
     color: #E11D48;
@@ -403,7 +348,6 @@ h1, h2, h3, h4 {
     font-weight: 600;
     line-height: 1.5;
 }
-
 .compare-winner {
     display: flex;
     align-items: center;
@@ -419,33 +363,27 @@ h1, h2, h3, h4 {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-
 .compare-card {
     padding: 30px;
 }
-
 .cc-safe {
     border-top: 5px solid #A1A1AA;
 }
-
 .cc-danger {
     border-top: 5px solid #E11D48;
 }
-
 .cc-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 24px;
 }
-
 .cc-title {
     font-size: 22px;
     font-weight: 800;
     margin: 0 0 8px 0;
     color: #FAFAFA;
 }
-
 .cc-badge-safe,
 .cc-badge-danger {
     padding: 5px 10px;
@@ -454,17 +392,14 @@ h1, h2, h3, h4 {
     font-weight: 800;
     text-transform: uppercase;
 }
-
 .cc-badge-safe {
     background: rgba(161, 161, 170, 0.1);
     color: #A1A1AA;
 }
-
 .cc-badge-danger {
     background: rgba(225, 29, 72, 0.1);
     color: #E11D48;
 }
-
 .cc-score-label {
     font-size: 11px;
     color: #71717A;
@@ -474,7 +409,6 @@ h1, h2, h3, h4 {
     letter-spacing: 1px;
     margin: 0 0 4px 0;
 }
-
 .cc-score-num {
     font-size: 60px;
     font-weight: 800;
@@ -482,22 +416,18 @@ h1, h2, h3, h4 {
     margin: 0;
     text-align: right;
 }
-
 .cc-score-num.safe {
     color: #A1A1AA;
 }
-
 .cc-score-num.danger {
     color: #E11D48;
 }
-
 .log-list {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
-
 .log-item {
     background: #18181B;
     border: 1px solid #27272A;
@@ -510,7 +440,6 @@ h1, h2, h3, h4 {
     gap: 12px;
     font-weight: 500;
 }
-
 .log-wc {
     margin-top: 7px;
     font-size: 12px;
@@ -519,7 +448,6 @@ h1, h2, h3, h4 {
     border-left: 3px solid #E11D48;
     padding-left: 8px;
 }
-
 .archive-card {
     padding: 22px 26px;
     margin-bottom: 14px;
@@ -527,49 +455,40 @@ h1, h2, h3, h4 {
     align-items: center;
     gap: 20px;
 }
-
 .archive-score {
     font-size: 30px;
     font-weight: 800;
     min-width: 55px;
 }
-
 .archive-score.critical {
     color: #E11D48;
 }
-
 .archive-score.risky {
     color: #EA580C;
 }
-
 .archive-score.safe {
     color: #A1A1AA;
 }
-
 .archive-meta {
     flex-grow: 1;
 }
-
 .archive-company {
     font-size: 16px;
     font-weight: 800;
     color: #FAFAFA;
     margin-bottom: 4px;
 }
-
 .archive-summary {
     font-size: 13px;
     color: #71717A;
     font-weight: 500;
 }
-
 .archive-time {
     font-size: 11px;
     color: #52525B;
     font-weight: 700;
     text-transform: uppercase;
 }
-
 .archive-type {
     font-size: 11px;
     color: #71717A;
@@ -578,14 +497,12 @@ h1, h2, h3, h4 {
     padding: 3px 8px;
     font-weight: 700;
 }
-
 .meme-box {
     border: 2px solid #27272A;
     border-radius: 16px;
     overflow: hidden;
     margin-top: 10px;
 }
-
 .meme-caption {
     background: #18181B;
     border-top: 1px solid #27272A;
@@ -594,17 +511,14 @@ h1, h2, h3, h4 {
     color: #71717A;
     font-weight: 600;
 }
-
 @media (max-width: 900px) {
     .top-result-box {
         flex-direction: column;
         align-items: flex-start;
     }
-
     .fun-grid {
         grid-template-columns: 1fr;
     }
-
     .archive-card {
         flex-direction: column;
         align-items: flex-start;

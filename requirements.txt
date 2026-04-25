@@ -1,8 +1,8 @@
-streamlit==1.56.0
-google-genai==1.73.1
-python-dotenv==1.2.2
-requests==2.33.1
-pypdf==6.10.2
-pillow==12.2.0
-cairosvg==2.9.0
-beautifulsoup4==4.12.3
+streamlit
+python-dotenv
+requests
+google-genai
+pypdf
+beautifulsoup4
+pillow
+cairosvg
