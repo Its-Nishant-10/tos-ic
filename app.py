@@ -401,19 +401,19 @@ def generate_fallback_meme(
         return None
 
     W, H = 1280, 720
-    img = Image.new("RGB", (W, H), (8, 11, 18))
+    img = Image.new("RGB", (W, H), (9, 9, 11))
     draw = ImageDraw.Draw(img)
 
     # Background gradient
     for y in range(H):
-        r = int(10 + y * 0.06)
-        g = int(12 + y * 0.01)
-        b = int(22 + y * 0.03)
+        r = int(9 + y * 0.01)
+        g = int(9 + y * 0.01)
+        b = int(11 + y * 0.01)
         draw.line([(0, y), (W, y)], fill=(r, g, b))
 
-    # Red glow circles
-    draw.ellipse((-180, -160, 420, 440), fill=(60, 10, 18))
-    draw.ellipse((900, -140, 1500, 460), fill=(45, 10, 55))
+    # Soft glow circles
+    draw.ellipse((-180, -160, 420, 440), fill=(24, 24, 27))
+    draw.ellipse((900, -140, 1500, 460), fill=(24, 24, 27))
 
     title_font = get_font(70, True)
     subtitle_font = get_font(34, True)
@@ -424,33 +424,33 @@ def generate_fallback_meme(
     draw.rounded_rectangle(
         (90, 80, 1190, 640),
         radius=38,
-        fill=(13, 17, 25),
-        outline=(248, 81, 73),
+        fill=(24, 24, 27),
+        outline=(39, 39, 42),
         width=4,
     )
 
     # Warning triangle
     triangle = [(180, 190), (300, 420), (60, 420)]
-    draw.polygon(triangle, outline=(248, 81, 73), fill=(40, 10, 12))
-    draw.line((180, 250, 180, 335), fill=(248, 81, 73), width=12)
-    draw.ellipse((170, 365, 190, 385), fill=(248, 81, 73))
+    draw.polygon(triangle, outline=(225, 29, 72), fill=(39, 39, 42))
+    draw.line((180, 250, 180, 335), fill=(225, 29, 72), width=12)
+    draw.ellipse((170, 365, 190, 385), fill=(225, 29, 72))
 
-    draw.text((340, 145), "TOS-IC WARNING", font=title_font, fill=(248, 81, 73))
-    draw.text((345, 230), company.upper(), font=subtitle_font, fill=(240, 246, 252))
+    draw.text((340, 145), "TOS-IC WARNING", font=title_font, fill=(225, 29, 72))
+    draw.text((345, 230), company.upper(), font=subtitle_font, fill=(250, 250, 250))
 
     label = "SAVAGE TRANSLATION" if savage else "THREAT SUMMARY"
-    draw.text((345, 300), label, font=small_font, fill=(139, 148, 158))
+    draw.text((345, 300), label, font=small_font, fill=(161, 161, 170))
 
     body = wrap_text(
         worst_case or "This policy may hide serious privacy or account risks.", 36
     )
-    draw.text((345, 340), body, font=body_font, fill=(255, 255, 255), spacing=10)
+    draw.text((345, 340), body, font=body_font, fill=(212, 212, 216), spacing=10)
 
     draw.text(
         (95, 665),
         "AI-generated satirical legal-tech poster · Verify before making decisions",
         font=small_font,
-        fill=(139, 148, 158),
+        fill=(113, 113, 122),
     )
 
     buffer = io.BytesIO()
@@ -472,8 +472,8 @@ def generate_threat_meme(
         prompt = f"""
 Generate ONLY raw SVG code for a 800x800 square meme card.
 
-Style: {style_desc} high-contrast dark mode.
-Colors: dark background (#0b0f15), bright red (#f85149), white text.
+Style: {style_desc} clean minimalist modern design.
+Colors: very dark neutral background (#09090B), crimson red accents (#E11D48), orange warnings (#EA580C).
 
 Requirements:
 - Size: width="800" height="800"
@@ -1211,17 +1211,17 @@ elif nav == "🗂️ ARCHIVES":
         s1, s2, s3 = st.columns(3)
 
         stat_cards = [
-            (s1, "TOTAL SCANS", total, "#f0f6fc"),
-            (s2, "CRITICAL", critical_count, "#f85149"),
-            (s3, "AVG RISK SCORE", avg_score, "#d29922"),
+            (s1, "TOTAL SCANS", total, "#FAFAFA"),
+            (s2, "CRITICAL", critical_count, "#E11D48"),
+            (s3, "AVG RISK SCORE", avg_score, "#EA580C"),
         ]
 
         for col, label, val, color in stat_cards:
             with col:
                 st.markdown(
                     f"""
-<div style="background:#161b22;border:1px solid #21262d;border-radius:16px;padding:22px;text-align:center;margin-bottom:20px;">
-    <div style="font-size:11px;color:#8b949e;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;">{label}</div>
+<div style="background:#18181B;border:1px solid #27272A;border-radius:16px;padding:22px;text-align:center;margin-bottom:20px;box-shadow:0 4px 10px rgba(0,0,0,0.2);">
+    <div style="font-size:11px;color:#71717A;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;">{label}</div>
     <div style="font-size:42px;font-weight:900;color:{color};">{val}</div>
 </div>
 """,
@@ -1252,11 +1252,11 @@ elif nav == "🗂️ ARCHIVES":
             logo_tag = logo_img_tag(logo_url, "cc-logo")
 
             if rating == "Critical":
-                rating_style = "background:rgba(248,81,73,0.1);color:#f85149;border:1px solid rgba(248,81,73,0.3);"
+                rating_style = "background:rgba(225,29,72,0.1);color:#E11D48;border:1px solid rgba(225,29,72,0.2);"
             elif rating == "Risky":
-                rating_style = "background:rgba(210,153,34,0.1);color:#d29922;border:1px solid rgba(210,153,34,0.3);"
+                rating_style = "background:rgba(234,88,12,0.1);color:#EA580C;border:1px solid rgba(234,88,12,0.2);"
             else:
-                rating_style = "background:rgba(46,160,67,0.1);color:#3fb950;border:1px solid rgba(46,160,67,0.3);"
+                rating_style = "background:rgba(161,161,170,0.1);color:#A1A1AA;border:1px solid rgba(161,161,170,0.2);"
 
             st.markdown(
                 f"""
@@ -1300,8 +1300,8 @@ elif nav == "🗂️ ARCHIVES":
 <div class="log-item" style="margin-bottom:8px;">
     <span>🚩</span>
     <div>
-        <b style="color:#f0f6fc;">{esc(flag.get("title", "Flag"))}</b>
-        {f'<span style="font-size:11px;color:#f85149;margin-left:8px;font-weight:900;">{esc(sev)}</span>' if sev else ""}
+        <b style="color:#FAFAFA;">{esc(flag.get("title", "Flag"))}</b>
+        {f'<span style="font-size:11px;color:#E11D48;margin-left:8px;font-weight:800;">{esc(sev)}</span>' if sev else ""}
         <br>{esc(flag.get("meaning", ""))}
         {f'<div class="log-wc">💀 {esc(worst)}</div>' if worst else ""}
         {f'<div class="log-wc">🔥 {esc(savage)}</div>' if savage else ""}

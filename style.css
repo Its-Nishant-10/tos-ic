@@ -1,101 +1,100 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&family=Work+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap');
 
 html, body, [class*="css"] {
-    font-family: 'Montserrat', sans-serif !important;
+    font-family: 'Work Sans', sans-serif !important;
+}
+
+h1, h2, h3, h4, .page-title, .section-title, .sidebar-title, .savage-panel-title, .score-orb .num, .fun-value, .cc-title, .cc-score-num, .archive-score {
+    font-family: 'Figtree', sans-serif !important;
 }
 
 .stApp {
-    background:
-        radial-gradient(circle at top left, rgba(248,81,73,0.15), transparent 35%),
-        radial-gradient(circle at top right, rgba(138,43,226,0.10), transparent 35%),
-        #0b0f15;
-    color: #c9d1d9;
+    background: #09090B;
+    color: #A1A1AA;
 }
 
 [data-testid="stSidebar"] {
-    background: linear-gradient(180deg, #05070a 0%, #0b0f15 100%) !important;
-    border-right: 1px solid #1f2328;
+    background: #09090B !important;
+    border-right: 1px solid #27272A;
 }
 
 h1, h2, h3, h4 {
-    color: #f0f6fc;
-    font-weight: 900;
+    color: #FAFAFA;
+    font-weight: 800;
 }
 
 .page-title {
     font-size: 46px;
-    font-weight: 900;
+    font-weight: 800;
     margin-bottom: 6px;
     letter-spacing: -1.5px;
-    color: #f0f6fc;
+    color: #FAFAFA;
 }
 
 .page-title span {
-    color: #f85149;
-    text-shadow: 0 0 25px rgba(248,81,73,0.4);
+    color: #E11D48;
+    text-shadow: 0 0 20px rgba(225, 29, 72, 0.2);
 }
 
 .page-sub {
     font-size: 16px;
-    color: #8b949e;
+    color: #71717A;
     margin-bottom: 30px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .section-title {
     font-size: 23px;
-    font-weight: 900;
+    font-weight: 800;
     margin: 35px 0 18px 0;
-    color: #f0f6fc;
+    color: #FAFAFA;
 }
 
 .stTextArea textarea,
 .stTextInput > div > div > input {
-    background-color: #0d1117 !important;
-    border: 1px solid #30363d !important;
-    color: #c9d1d9 !important;
-    border-radius: 14px !important;
+    background-color: #18181B !important;
+    border: 1px solid #27272A !important;
+    color: #FAFAFA !important;
+    border-radius: 12px !important;
     font-family: 'JetBrains Mono', monospace !important;
 }
 
 .stTextArea textarea:focus,
 .stTextInput > div > div > input:focus {
-    border-color: #f85149 !important;
-    box-shadow: 0 0 22px rgba(248,81,73,0.18) !important;
+    border-color: #E11D48 !important;
+    box-shadow: 0 0 0 2px rgba(225, 29, 72, 0.2) !important;
 }
 
 .stButton > button {
-    background: #161b22 !important;
+    background: #E11D48 !important;
     color: #ffffff !important;
-    border: 1px solid #30363d !important;
-    font-weight: 900 !important;
+    border: none !important;
+    font-weight: 700 !important;
     border-radius: 10px;
     padding: 11px 20px;
-    transition: all 0.25s ease;
+    transition: all 0.2s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 .stButton > button:hover {
-    border-color: #f85149 !important;
-    color: #f85149 !important;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(248,81,73,0.22);
+    background: #BE123C !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(225, 29, 72, 0.3);
 }
 
 .sidebar-title {
-    color: #f85149;
+    color: #E11D48;
     margin: 0;
     font-size: 34px;
-    font-weight: 900;
-    letter-spacing: -1.8px;
-    text-shadow: 0 0 22px rgba(248,81,73,0.45);
+    font-weight: 800;
+    letter-spacing: -1.2px;
 }
 
 .sidebar-tagline {
-    color: #8b949e;
+    color: #71717A;
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 600;
     margin-top: 4px;
 }
 
@@ -103,30 +102,30 @@ h1, h2, h3, h4 {
     margin: 12px 0 20px 0;
     padding: 16px;
     border-radius: 16px;
-    background: linear-gradient(135deg, rgba(248,81,73,0.18), rgba(255,0,128,0.08)), #0d1117;
-    border: 1px solid rgba(248,81,73,0.55);
-    box-shadow: 0 0 28px rgba(248,81,73,0.18);
+    background: #18181B;
+    border: 1px solid #3F3F46;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 .savage-panel-title {
-    color: #ff6b63;
+    color: #EA580C;
     font-size: 16px;
-    font-weight: 900;
+    font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 1.2px;
+    letter-spacing: 1px;
     margin-bottom: 6px;
 }
 
 .savage-panel-text {
-    color: #c9d1d9;
-    font-size: 12px;
-    font-weight: 700;
+    color: #D4D4D8;
+    font-size: 13px;
+    font-weight: 500;
     line-height: 1.5;
 }
 
 .input-mode-card {
-    background: #10151d;
-    border: 1px solid #30363d;
+    background: #18181B;
+    border: 1px solid #27272A;
     border-radius: 16px;
     padding: 18px;
     margin-bottom: 16px;
@@ -137,31 +136,31 @@ h1, h2, h3, h4 {
     margin-bottom: 14px;
     padding: 7px 14px;
     border-radius: 999px;
-    background: rgba(248,81,73,0.12);
-    border: 1px solid rgba(248,81,73,0.55);
-    color: #f85149;
-    font-weight: 900;
+    background: rgba(225, 29, 72, 0.1);
+    border: 1px solid rgba(225, 29, 72, 0.3);
+    color: #E11D48;
+    font-weight: 800;
     font-size: 12px;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
 
 .top-result-box {
-    background: linear-gradient(135deg, rgba(22,27,34,1) 0%, rgba(11,15,21,1) 100%);
-    border: 1px solid #21262d;
+    background: #18181B;
+    border: 1px solid #27272A;
     border-radius: 20px;
     padding: 34px;
     display: flex;
     align-items: center;
     gap: 34px;
-    border-left: 6px solid #f85149;
+    border-left: 6px solid #E11D48;
     margin-bottom: 24px;
-    box-shadow: 0 16px 40px rgba(0,0,0,0.55);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
 .score-orb {
-    background: rgba(248,81,73,0.08);
-    border: 3px solid rgba(248,81,73,0.9);
+    background: rgba(225, 29, 72, 0.05);
+    border: 3px solid #E11D48;
     border-radius: 50%;
     width: 124px;
     height: 124px;
@@ -174,15 +173,15 @@ h1, h2, h3, h4 {
 
 .score-orb .num {
     font-size: 46px;
-    font-weight: 900;
-    color: #f85149;
+    font-weight: 800;
+    color: #E11D48;
     line-height: 1;
 }
 
 .score-orb .den {
     font-size: 13px;
-    color: #f85149;
-    font-weight: 800;
+    color: #F87171;
+    font-weight: 700;
 }
 
 .company-logo,
@@ -198,6 +197,7 @@ h1, h2, h3, h4 {
     height: 38px;
     border-radius: 8px;
     margin-right: 8px;
+    border: 1px solid #27272A;
 }
 
 .cc-logo {
@@ -209,27 +209,27 @@ h1, h2, h3, h4 {
 
 .company-name {
     font-size: 14px;
-    color: #8b949e;
-    font-weight: 800;
+    color: #71717A;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 8px;
 }
 
 .top-result-text h2 {
-    color: #f85149;
+    color: #FAFAFA;
     margin: 0 0 8px 0;
     font-size: 31px;
-    font-weight: 900;
+    font-weight: 800;
     text-transform: uppercase;
 }
 
 .top-result-text p {
     font-size: 18px;
     margin: 0;
-    color: #c9d1d9;
+    color: #A1A1AA;
     line-height: 1.55;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .fun-grid {
@@ -240,8 +240,8 @@ h1, h2, h3, h4 {
 }
 
 .fun-card {
-    background: #111821;
-    border: 1px solid #21262d;
+    background: #18181B;
+    border: 1px solid #27272A;
     border-radius: 16px;
     padding: 18px;
     text-align: center;
@@ -249,8 +249,8 @@ h1, h2, h3, h4 {
 
 .fun-label {
     font-size: 11px;
-    color: #8b949e;
-    font-weight: 900;
+    color: #71717A;
+    font-weight: 700;
     letter-spacing: 1.2px;
     text-transform: uppercase;
     margin-bottom: 7px;
@@ -258,27 +258,28 @@ h1, h2, h3, h4 {
 
 .fun-value {
     font-size: 28px;
-    font-weight: 900;
-    color: #f85149;
+    font-weight: 800;
+    color: #E11D48;
 }
 
 .savage-banner,
 .savage-translation {
-    background: linear-gradient(135deg, rgba(248,81,73,0.18), rgba(255,0,128,0.08)), #12080a;
-    border: 1px solid rgba(248,81,73,0.55);
+    background: #18181B;
+    border: 1px solid #27272A;
     border-radius: 16px;
 }
 
 .savage-banner {
     margin: 20px 0 8px 0;
     padding: 22px;
+    border-left: 4px solid #EA580C;
 }
 
 .savage-banner-title,
 .savage-translation-label {
-    color: #ff6b63;
-    font-weight: 900;
-    letter-spacing: 1.5px;
+    color: #EA580C;
+    font-weight: 800;
+    letter-spacing: 1px;
     text-transform: uppercase;
 }
 
@@ -288,15 +289,16 @@ h1, h2, h3, h4 {
 }
 
 .savage-banner-text {
-    color: #fff;
+    color: #FAFAFA;
     font-size: 19px;
-    font-weight: 900;
+    font-weight: 700;
     line-height: 1.45;
 }
 
 .savage-translation {
     margin-top: 13px;
     padding: 14px;
+    border-left: 4px solid #EA580C;
 }
 
 .savage-translation-label {
@@ -305,17 +307,17 @@ h1, h2, h3, h4 {
 }
 
 .savage-translation-text {
-    color: #fff;
+    color: #D4D4D8;
     font-size: 14px;
-    font-weight: 800;
+    font-weight: 600;
     line-height: 1.5;
 }
 
 .flag-card,
 .compare-card,
 .archive-card {
-    background: #161b22;
-    border: 1px solid #21262d;
+    background: #18181B;
+    border: 1px solid #27272A;
     border-radius: 16px;
 }
 
@@ -335,64 +337,64 @@ h1, h2, h3, h4 {
 
 .flag-title {
     font-size: 18px;
-    font-weight: 900;
-    color: #f0f6fc;
+    font-weight: 800;
+    color: #FAFAFA;
     margin: 0;
 }
 
 .badge {
-    background: rgba(248,81,73,0.13);
-    color: #f85149;
-    border: 1px solid rgba(248,81,73,0.45);
+    background: rgba(225, 29, 72, 0.1);
+    color: #E11D48;
+    border: 1px solid rgba(225, 29, 72, 0.2);
     padding: 6px 11px;
     border-radius: 8px;
     font-size: 11px;
     text-transform: uppercase;
-    font-weight: 900;
+    font-weight: 800;
     white-space: nowrap;
 }
 
 .badge.high {
-    background: rgba(210,153,34,0.12);
-    color: #d29922;
-    border-color: rgba(210,153,34,0.45);
+    background: rgba(234, 88, 12, 0.1);
+    color: #EA580C;
+    border-color: rgba(234, 88, 12, 0.2);
 }
 
 .badge.safe {
-    background: rgba(46,160,67,0.12);
-    color: #3fb950;
-    border-color: rgba(46,160,67,0.45);
+    background: rgba(161, 161, 170, 0.1);
+    color: #A1A1AA;
+    border-color: rgba(161, 161, 170, 0.2);
 }
 
 .flag-desc {
     font-size: 15px;
-    color: #8b949e;
+    color: #A1A1AA;
     line-height: 1.6;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .worst-case-box {
-    background: #05070a;
-    border: 1px solid #1f2328;
+    background: #09090B;
+    border: 1px solid #27272A;
     border-radius: 12px;
     padding: 14px;
-    border-left: 4px solid #f85149;
+    border-left: 4px solid #E11D48;
 }
 
 .wc-label {
     font-size: 10px;
     text-transform: uppercase;
-    color: #8b949e;
-    font-weight: 900;
+    color: #71717A;
+    font-weight: 800;
     letter-spacing: 1.5px;
     margin-bottom: 7px;
 }
 
 .wc-text {
     font-size: 14px;
-    color: #ff6b63;
+    color: #E11D48;
     margin: 0;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.5;
 }
 
@@ -401,10 +403,10 @@ h1, h2, h3, h4 {
     align-items: center;
     justify-content: center;
     font-size: 24px;
-    font-weight: 900;
-    color: #f85149;
-    background: rgba(248,81,73,0.08);
-    border: 1px solid rgba(248,81,73,0.65);
+    font-weight: 800;
+    color: #FAFAFA;
+    background: #18181B;
+    border: 1px solid #27272A;
     padding: 22px;
     border-radius: 16px;
     margin: 22px 0 30px 0;
@@ -417,11 +419,11 @@ h1, h2, h3, h4 {
 }
 
 .cc-safe {
-    border-top: 5px solid #2ea043;
+    border-top: 5px solid #A1A1AA;
 }
 
 .cc-danger {
-    border-top: 5px solid #f85149;
+    border-top: 5px solid #E11D48;
 }
 
 .cc-header {
@@ -433,9 +435,9 @@ h1, h2, h3, h4 {
 
 .cc-title {
     font-size: 22px;
-    font-weight: 900;
+    font-weight: 800;
     margin: 0 0 8px 0;
-    color: #f0f6fc;
+    color: #FAFAFA;
 }
 
 .cc-badge-safe,
@@ -443,44 +445,44 @@ h1, h2, h3, h4 {
     padding: 5px 10px;
     border-radius: 7px;
     font-size: 11px;
-    font-weight: 900;
+    font-weight: 800;
     text-transform: uppercase;
 }
 
 .cc-badge-safe {
-    background: rgba(46,160,67,0.15);
-    color: #3fb950;
+    background: rgba(161, 161, 170, 0.1);
+    color: #A1A1AA;
 }
 
 .cc-badge-danger {
-    background: rgba(248,81,73,0.15);
-    color: #f85149;
+    background: rgba(225, 29, 72, 0.1);
+    color: #E11D48;
 }
 
 .cc-score-label {
     font-size: 11px;
-    color: #8b949e;
+    color: #71717A;
     text-align: right;
     text-transform: uppercase;
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: 1px;
     margin: 0 0 4px 0;
 }
 
 .cc-score-num {
     font-size: 60px;
-    font-weight: 900;
+    font-weight: 800;
     line-height: 1;
     margin: 0;
     text-align: right;
 }
 
 .cc-score-num.safe {
-    color: #3fb950;
+    color: #A1A1AA;
 }
 
 .cc-score-num.danger {
-    color: #f85149;
+    color: #E11D48;
 }
 
 .log-list {
@@ -491,24 +493,24 @@ h1, h2, h3, h4 {
 }
 
 .log-item {
-    background: #0d1117;
-    border: 1px solid #21262d;
+    background: #18181B;
+    border: 1px solid #27272A;
     border-radius: 12px;
     padding: 14px 16px;
     font-size: 14px;
     line-height: 1.6;
-    color: #c9d1d9;
+    color: #A1A1AA;
     display: flex;
     gap: 12px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .log-wc {
     margin-top: 7px;
     font-size: 12px;
-    color: #f85149;
-    font-weight: 700;
-    border-left: 3px solid #f85149;
+    color: #E11D48;
+    font-weight: 600;
+    border-left: 3px solid #E11D48;
     padding-left: 8px;
 }
 
@@ -522,20 +524,20 @@ h1, h2, h3, h4 {
 
 .archive-score {
     font-size: 30px;
-    font-weight: 900;
+    font-weight: 800;
     min-width: 55px;
 }
 
 .archive-score.critical {
-    color: #f85149;
+    color: #E11D48;
 }
 
 .archive-score.risky {
-    color: #d29922;
+    color: #EA580C;
 }
 
 .archive-score.safe {
-    color: #3fb950;
+    color: #A1A1AA;
 }
 
 .archive-meta {
@@ -544,49 +546,47 @@ h1, h2, h3, h4 {
 
 .archive-company {
     font-size: 16px;
-    font-weight: 900;
-    color: #f0f6fc;
+    font-weight: 800;
+    color: #FAFAFA;
     margin-bottom: 4px;
 }
 
 .archive-summary {
     font-size: 13px;
-    color: #8b949e;
-    font-weight: 600;
+    color: #71717A;
+    font-weight: 500;
 }
 
 .archive-time {
     font-size: 11px;
-    color: #484f58;
-    font-weight: 800;
+    color: #52525B;
+    font-weight: 700;
     text-transform: uppercase;
 }
 
 .archive-type {
     font-size: 11px;
-    color: #8b949e;
-    background: #0d1117;
-    border: 1px solid #21262d;
+    color: #71717A;
+    background: #27272A;
     border-radius: 5px;
     padding: 3px 8px;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .meme-box {
-    border: 2px solid #f85149;
+    border: 2px solid #27272A;
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 0 32px rgba(248,81,73,0.18);
     margin-top: 10px;
 }
 
 .meme-caption {
-    background: #161b22;
-    border-top: 1px solid #21262d;
+    background: #18181B;
+    border-top: 1px solid #27272A;
     padding: 13px 18px;
     font-size: 13px;
-    color: #8b949e;
-    font-weight: 700;
+    color: #71717A;
+    font-weight: 600;
 }
 
 @media (max-width: 900px) {
