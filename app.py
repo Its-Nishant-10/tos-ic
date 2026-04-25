@@ -236,7 +236,7 @@ def get_company_name_from_text(text: str) -> str:
         return "Unknown Company"
     try:
         res = c.models.generate_content(
-            model="gemini-2.0-flash",
+            model="gemini-1.5-flash",
             contents=f"Extract the company name from this text. Return ONLY the name (max 3 words). If unknown, return 'Unknown Company'.\n\nTEXT:\n{text[:2000]}",
             config=types.GenerateContentConfig(
                 http_options=types.HttpOptions(timeout=30000),
@@ -379,6 +379,7 @@ RULES:
 - If a specific risk or clause is not clearly stated or supported by the provided text, do NOT invent it. Instead, say "Not explicitly stated in the provided text" in the explanation fields.
 JSON format:
 {{
+  "company_name": "<Extract company name from text>",
   "risk_score": <number 0-100>,
   "rating": "<Safe|Risky|Critical>",
   "summary": "<15 words max>",
@@ -388,20 +389,27 @@ JSON format:
 LEGAL TEXT:
 {text[:12000]}
 """
-    res = c.models.generate_content(
-        model="gemini-2.0-flash",
-        contents=prompt,
-        config=types.GenerateContentConfig(
-            response_mime_type="application/json",
-            temperature=0.55 if savage else 0.25,
-            max_output_tokens=2048,
-            http_options=types.HttpOptions(timeout=60000),
-        ),
-    )
-    if not res.text:
-        raise ValueError("Empty response from AI")
-    data = extract_json(res.text)
-    return normalize_analysis(data)
+    for attempt in range(3):
+        try:
+            res = c.models.generate_content(
+                model="gemini-1.5-flash",
+                contents=prompt,
+                config=types.GenerateContentConfig(
+                    response_mime_type="application/json",
+                    temperature=0.55 if savage else 0.25,
+                    max_output_tokens=2048,
+                    http_options=types.HttpOptions(timeout=60000),
+                ),
+            )
+            if not res.text:
+                raise ValueError("Empty response from AI")
+            data = extract_json(res.text)
+            return normalize_analysis(data)
+        except Exception as e:
+            if "429" in str(e) and attempt < 2:
+                time.sleep(2 ** (attempt + 1))
+                continue
+            raise
 
 
 @st.cache_resource
@@ -520,7 +528,7 @@ SVG starts with <svg and ends with </svg>
         if not c:
             raise RuntimeError("API Key missing.")
         res = c.models.generate_content(
-            model="gemini-2.0-flash",
+            model="gemini-1.5-flash",
             contents=prompt,
             config=types.GenerateContentConfig(
                 http_options=types.HttpOptions(timeout=60000),
@@ -992,9 +1000,8 @@ if nav == "🎯 ANALYZE":
         company_meta = {"name": "Unknown", "domain": "", "logo": ""}
         if st.session_state.input_mode == "Text":
             raw_text = raw_text_input.strip()
-            if raw_text:
-                with st.spinner("Identifying target..."):
-                    company_meta["name"] = get_company_name_from_text(raw_text)
+            # Company name will be extracted during analysis to save quota
+            company_meta["name"] = "Legal Document" 
         elif st.session_state.input_mode == "URL":
             url_val = url_input.strip()
             if url_val:
@@ -1024,7 +1031,7 @@ if nav == "🎯 ANALYZE":
                     )
                 entry = {
                     "data": data,
-                    "company": company_meta["name"],
+                    "company": data.get("company_name", company_meta["name"]),
                     "logo": company_meta.get("logo", ""),
                     "type": st.session_state.input_mode,
                     "timestamp": datetime.now().strftime("%H:%M · %b %d"),
@@ -1133,6 +1140,7 @@ elif nav == "⚔️ COMPARE":
                         else "Calculating threat delta..."
                     ):
                         resA = analyze_legal(textA, is_compare=True, savage=savage_mode)
+                        time.sleep(1) 
                         resB = analyze_legal(textB, is_compare=True, savage=savage_mode)
                     st.session_state.last_compare = {
                         "metaA": metaA,
