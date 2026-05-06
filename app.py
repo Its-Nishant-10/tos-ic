@@ -949,6 +949,27 @@ with st.sidebar:
                 st.write("AVAILABLE MODELS:", models)
             except Exception as e:
                 st.write("MODELS ERROR:", str(e))
+
+    st.markdown(
+        """
+<div class="team-section">
+    <div class="team-label">CO-DEVELOPED BY</div>
+    <div class="team-members">
+        <a href="https://github.com/Its-Nishant-10" target="_blank" class="team-badge">
+            <img src="https://github.com/Its-Nishant-10.png" alt="Nishant">
+            <span>Nishant</span>
+        </a>
+        <span class="team-amp">&</span>
+        <a href="https://github.com/VENNZSS" target="_blank" class="team-badge">
+            <img src="https://github.com/VENNZSS.png" alt="VENNZSS">
+            <span>VENNZSS</span>
+        </a>
+    </div>
+</div>
+""",
+        unsafe_allow_html=True,
+    )
+
 if nav == "🎯 ANALYZE":
     st.markdown(
         '<div class="page-title">Analysis <span>Engine</span></div>',
