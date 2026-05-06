@@ -70,34 +70,35 @@ Before running **TOS-IC**, ensure you have:
 </details>
 
 ### `$ ./install.sh`
-```bash
 Installation
 Clone the repository:
-
+```bash
 git clone https://github.com/yourusername/tos-ic.git
 cd tos-ic
+```
 Set up a virtual environment (Recommended):
-
+```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
 Install the dependencies:
-
+```bash
 pip install -r requirements.txt
+```
 Note: If meme generation image formats fail, ensure you have system-level dependencies for cairosvg installed (like libcairo2 on Linux).
 
 Set up your Environment Variables: Create a .env file in the root directory and add your Gemini API Key:
-
+```bash
 GEMINI_API_KEY=your_gemini_api_key_here
 ```
 
 ### `$ ./run.sh`
-```javascript
 Usage
 Run the Streamlit application from your terminal:
-
+```javascript
 streamlit run app.py
-The app will launch in your default web browser (usually at http://localhost:8501). From there, you can paste text, upload a PDF, or drop a URL to start scanning.
 ```
+The app will launch in your default web browser (usually at http://localhost:8501). From there, you can paste text, upload a PDF, or drop a URL to start scanning.
 
 
 ### `$ cat CONTRIBUTING.md`
