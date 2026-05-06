@@ -133,10 +133,7 @@ Pull requests are welcome. For major changes, please open an issue first.
 ### `$ whoami`
 
 **Nishant Nahar** — DEV_1
-[!GitHub](https://github.com/Its-Nishant-10) [!LinkedIn](https://linkedin.com/in/nishantnahar2006) [!Email](mailto:nishantnahar2006@gmail.com) [!Website](https://portfolio-fawn-nine-frfcfpqjim.vercel.app/)
-
 **VENNZSS** — DEV_2
-[!GitHub](https://github.com/VENNZSS)
 
 ---
 
